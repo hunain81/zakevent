@@ -87,7 +87,7 @@ body {
  <div style="padding-top: 30px" >
   <h1 class="title">Black Tie Event</h1>
   <p class="location">Shamadan Hall and Lawn <br>Islamabad Serena Hotel </p>
-  <p class="details">2nd March, 2024<br> 7:00 PM onward</p>
+  <p class="details">2nd March, 2024<br> 7:00 PM onwards</p>
   <br><br><br><br><br><br><br><br><br><br><br>
   <p class="scroll">Scroll down to Register</p>
 </div>
