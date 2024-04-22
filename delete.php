@@ -15,7 +15,7 @@ try {
         $stmt->bindParam(':id', $id);
         $stmt->execute();
 
-        header("Location: index.php");
+        header("Location: display.php");
         exit();
     } else {
         echo "ID parameter is missing";

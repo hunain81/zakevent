@@ -79,36 +79,39 @@ body {
 <main class="main">
   <div class="city">  <img src="eventScreenLogo.png" alt="" style="float: left; height: 140px; width:100px">
     <p class="date" style="font-size: 45px; text-align: right;">
-        <span style="color: #730E20;">02</span><br>
-        <span style="color: #1D213A;">03</span><br>
+        <span style="color: #730E20;">11</span><br>
+        <span style="color: #1D213A;">05</span><br>
         <span style="color: #474D27;">24</span>
     </p>
 </div>
  <div style="padding-top: 30px" >
-  <h1 class="title">Black Tie Event</h1>
-  <p class="location">Shamadan Hall and Lawn <br>Islamabad Serena Hotel </p>
-  <p class="details">2nd March, 2024<br> 7:00 PM onwards</p>
+  <h1 class="title">Black Tie Event RSVP</h1>
+  <p class="location">The Rock Musicarium<br>Naval Sailing Club Rd, Islamabad</p>
+  <p class="details">11th May, 2024<br> 7:30 PM onwards</p>
   <br><br><br><br><br><br><br><br><br><br><br>
   <p class="scroll">Scroll down to Register</p>
 </div>
     <div style="padding-top: 100px;">
-  <form id="registration-form" class="form">
-    <p style="color: black; font-weight: bold; font-size: 20px">Register for the Event</p>
-    <br><br><br><br>
-    <label for="name" style="padding-top: 20px; display: block; margin-bottom: 0.5rem; font-size: 1rem; padding-right: 240px;">Name</label>
-    <input class="input" type="text" id="name" name="name" placeholder="Full Name" required><br>
-    <label for="email" style="padding-top: 20px; display: block; margin-bottom: 0.5rem; font-size: 1rem; padding-right: 240px;">Email</label>
-    <input class="input" type="email" id="email" name="email" placeholder="Email Address" required><br>
-    <label for="phone" style="padding-top: 20px; display: block; margin-bottom: 0.5rem; font-size: 1rem; padding-right: 170px;">Phone Number</label>
-    <input class="input" type="tel" id="phone" name="phone" placeholder="Phone Number" required><br>
-    <label for="guests" style="padding-top: 20px; display: block; margin-bottom: 0.5rem; font-size: 1rem; padding-right: 150px;">Number of Guests</label>
-    <input class="input" type="number" id="guests" name="guests" placeholder="Number of Guests"><br><br>
+    <form id="registration-form" class="form">
+  <p style="color: black; font-weight: bold; font-size: 20px">Register for the Event</p>
+  <br><br><br><br>
+  <label for="name" style="padding-top: 20px; display: block; margin-bottom: 0.5rem; font-size: 1rem; padding-right: 240px;">Name</label>
+  <input class="input" type="text" id="name" name="name" placeholder="Full Name" required><br>
+  <label for="email" style="padding-top: 20px; display: block; margin-bottom: 0.5rem; font-size: 1rem; padding-right: 240px;">Email</label>
+  <input class="input" type="email" id="email" name="email" placeholder="Email Address" required><br>
+  <label for="phone" style="padding-top: 20px; display: block; margin-bottom: 0.5rem; font-size: 1rem; padding-right: 170px;">Phone Number</label>
+  <input class="input" type="tel" id="phone" name="phone" placeholder="Phone Number" required><br>
+  <label for="guests" style="padding-top: 20px; display: block; margin-bottom: 0.5rem; font-size: 1rem; padding-right: 150px;">Number of Guests</label>
+  <input class="input" type="number" id="guests" name="guests" placeholder="Number of Guests"><br><br>
 
-    <button type="submit" style="margin-top: 20px; background-color: #A38559; width: 80%; font-weight: bold;">SUBMIT</button>
-<br> <br><br> </form>
+  <button type="submit" style="margin-top: 20px; background-color: #A38559; width: 80%; font-weight: bold;">SUBMIT</button>
+  <br> <br><br>
+</form>
+
 </div>
 </main>
 
+</script>
 </body>
 <script>
     document.getElementById('registration-form').addEventListener('submit', (event) => {
