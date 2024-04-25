@@ -85,7 +85,7 @@ body {
     </p>
 </div>
  <div style="padding-top: 30px" >
-  <h1 class="title">Black Tie Event RSVP</h1>
+  <h1 class="title">Black Tie Event</h1>
   <p class="location">The Rock Musicarium<br>Naval Sailing Club Rd, Islamabad</p>
   <p class="details">11th May, 2024<br> 7:30 PM onwards</p>
   <br><br><br><br><br><br><br><br><br><br><br>
