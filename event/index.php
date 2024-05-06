@@ -102,7 +102,9 @@ body {
   <label for="phone" style="padding-top: 20px; display: block; margin-bottom: 0.5rem; font-size: 1rem; padding-right: 170px;">Phone Number</label>
   <input class="input" type="tel" id="phone" name="phone" placeholder="Phone Number" required><br>
   <label for="guests" style="padding-top: 20px; display: block; margin-bottom: 0.5rem; font-size: 1rem; padding-right: 150px;">Number of Guests</label>
-  <input class="input" type="number" id="guests" name="guests" placeholder="Number of Guests"><br><br>
+  <input class="input" type="number" id="guests" name="guests" placeholder="Number of Guests"><br>
+  <label for="host" style="padding-top: 20px; display: block; margin-bottom: 0.5rem; font-size: 1rem; padding-right: 200px;">Host Name</label>
+  <input class="input" type="text" id="host" name="host" placeholder="Host Name" required><br><br>
 
   <button type="submit" style="margin-top: 20px; background-color: #A38559; width: 80%; font-weight: bold;">SUBMIT</button>
   <br> <br><br>
