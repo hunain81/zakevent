@@ -46,13 +46,14 @@
 
         if (count($records) > 0) {
             echo "<table>";
-            echo "<tr><th>Name</th><th>Email</th><th>Phone</th><th>Guests</th><th>Action</th></tr>";
+            echo "<tr><th>Name</th><th>Email</th><th>Phone</th><th>Guests</th><th>Host</th><th>Action</th></tr>";
             foreach ($records as $record) {
                 echo "<tr>";
                 echo "<td>{$record['name']}</td>";
                 echo "<td>{$record['email']}</td>";
                 echo "<td>{$record['phone']}</td>";
                 echo "<td>{$record['guests']}</td>";
+                echo "<td>{$record['host']}</td>";
                 echo "<td><a href='delete.php?id={$record['id']}'>Delete</a></td>";
                 echo "</tr>";
             }
