@@ -21,21 +21,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
     $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
     $guests = filter_input(INPUT_POST, 'guests', FILTER_VALIDATE_INT);
+    $host = filter_input(INPUT_POST, 'host', FILTER_SANITIZE_STRING); // Ensure correct filtering
 
     // Validate and sanitize data (use prepared statements in production)
     // ...
 
     // Insert data into database (prepare and execute your query)
-    $sql = "INSERT INTO event (name, email, phone, guests) VALUES (:name, :email, :phone, :guests)";
+    $sql = "INSERT INTO event (name, email, phone, guests, host) VALUES (:name, :email, :phone, :guests, :host)";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':name', $name);
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':phone', $phone);
     $stmt->bindParam(':guests', $guests);
+    $stmt->bindParam(':host', $host);
     $stmt->execute();
 
     echo "Registration successful!";
 }
+
 
 // Disconnect from database
 $conn = null;
