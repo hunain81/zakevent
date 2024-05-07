@@ -101,7 +101,7 @@ body {
   <input class="input" type="email" id="email" name="email" placeholder="Email Address" required><br>
   <label for="phone" style="padding-top: 20px; display: block; margin-bottom: 0.5rem; font-size: 1rem; padding-right: 170px;">Phone Number</label>
   <input class="input" type="tel" id="phone" name="phone" placeholder="Phone Number" required><br>
-  <label for="guests" style="padding-top: 20px; display: block; margin-bottom: 0.5rem; font-size: 1rem; padding-right: 150px;">Number of Guests (Including Yourself)</label>
+  <label for="guests" style="padding-top: 20px; display: block; margin-bottom: 0.5rem; font-size: 1rem; padding-right: 10px;">Number of Guests (Including Yourself)</label>
   <input class="input" type="number" id="guests" name="guests" placeholder="Number of Guests"><br>
   <label for="host" style="padding-top: 20px; display: block; margin-bottom: 0.5rem; font-size: 1rem; padding-right: 200px;">Host Name</label>
   <input class="input" type="text" id="host" name="host" placeholder="Host Name" required><br><br>
