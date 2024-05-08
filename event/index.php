@@ -70,7 +70,40 @@ body {
   font-size: 1rem;
   cursor: pointer;
 }
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
 
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 
 </style>
@@ -102,7 +135,7 @@ body {
   <label for="phone" style="padding-top: 20px; display: block; margin-bottom: 0.5rem; font-size: 1rem; padding-right: 170px;">Phone Number</label>
   <input class="input" type="tel" id="phone" name="phone" placeholder="Phone Number" required><br>
   <label for="guests" style="padding-top: 20px; display: block; margin-bottom: 0.5rem; font-size: 1rem; padding-right: 10px;">Number of Guests (Including Yourself)</label>
-  <input class="input" type="number" id="guests" name="guests" placeholder="Number of Guests" max="2" required><br>
+  <input class="input" type="number" id="guests" name="guests" placeholder="Number of Guests" max="2"><br>
   <label for="host" style="padding-top: 20px; display: block; margin-bottom: 0.5rem; font-size: 1rem; padding-right: 200px;">Host Name</label>
   <input class="input" type="text" id="host" name="host" placeholder="Host Name" required><br><br>
 
@@ -111,28 +144,66 @@ body {
 </form>
 
 </div>
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id="modal-message"></p>
+  </div>
+</div>
+
 </main>
 
-</script>
 </body>
 <script>
-    document.getElementById('registration-form').addEventListener('submit', (event) => {
-      event.preventDefault();
-      
-      // Store form reference
-      const form = document.getElementById('registration-form');
-  
-      fetch('process.php', {
+document.getElementById('registration-form').addEventListener('submit', (event) => {
+    event.preventDefault();
+    
+    // Store form reference
+    const form = document.getElementById('registration-form');
+
+    fetch('process.php', {
         method: 'POST',
         body: new FormData(form)
-      })
-      .then(response => response.text())
-      .then(data => {
+    })
+    .then(response => response.text())
+    .then(data => {
         if (data.includes("Registration successful!")) {
-          // Reset form after successful submission
-          form.reset();
+            // Reset form after successful submission
+            form.reset();
+            // Show success modal
+            showModal("Registration successful!");
+        } else {
+            showModal("Registration failed. Please try again."); // Show failure modal
         }
-      });
     });
-  </script>
+});
+
+// Function to display modal
+function showModal(message) {
+    // Get the modal element
+    var modal = document.getElementById("myModal");
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    // Get the message element in modal
+    var modalMessage = document.getElementById("modal-message");
+
+    // Set modal message
+    modalMessage.textContent = message;
+    // Display the modal
+    modal.style.display = "block";
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
+</script>
 </html>
